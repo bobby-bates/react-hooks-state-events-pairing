@@ -1,4 +1,7 @@
 import { useState } from 'react'
+import Video from './Video'
+// import VideoDetails from './VideoDetails'
+// import CommentList from './CommentList'
 import video from "../data/video.js";
 
 function App() {
@@ -12,16 +15,16 @@ function App() {
     downvotes,
     comments } = video
 
-  console.log("Here's your data:");
+  // console.log("Here's your data:");
   // console.log(video);
-  console.log(id);
-  console.log(title);
-  console.log(embedUrl);
-  console.log(views);
-  console.log(createdAt);
-  console.log(upvotes);
-  console.log(downvotes);
-  console.log(comments);
+  // console.log(id);
+  // console.log(title);
+  // console.log(embedUrl);
+  // console.log(views);
+  // console.log(createdAt);
+  // console.log(upvotes);
+  // console.log(downvotes);
+  // console.log(comments);
   /*
   State needed:
   - Comments (arr of objs)
@@ -29,18 +32,15 @@ function App() {
   - Downvotes count (int)
   */
 
-  const [currUpvotes, setCurrUpvotes] = useState()
+  const [currUpvotes, setCurrUpvotes] = useState(upvotes)
+  const [currDownvotes, setCurrDownvotes] = useState(downvotes)
+  const [currComments, setCurrComments] = useState(comments)
+  // console.log(currUpvotes)
+  // console.log(currDownvotes)
 
   return (
     <div className="App">
-      <iframe
-        width="919"
-        height="525"
-        src="https://www.youtube.com/embed/dQw4w9WgXcQ"
-        frameBorder="0"
-        allowFullScreen
-        title="Thinking in React"
-      />
+      <Video embedUrl={embedUrl} title={title} />
     </div>
   );
 }
