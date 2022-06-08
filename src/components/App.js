@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import Video from './Video'
-// import VideoDetails from './VideoDetails'
-// import CommentList from './CommentList'
+import VideoDetails from './VideoDetails'
+import CommentList from './CommentList'
 import video from "../data/video.js";
 
 function App() {
@@ -41,6 +41,14 @@ function App() {
   return (
     <div className="App">
       <Video embedUrl={embedUrl} title={title} />
+      <VideoDetails
+        title={title}
+        views={views}
+        createdAt={createdAt}
+        upvotes={currUpvotes}
+        downvotes={currDownvotes}
+      />
+      <CommentList comments={currComments}/>
     </div>
   );
 }
