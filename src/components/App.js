@@ -46,7 +46,9 @@ function App() {
         views={views}
         createdAt={createdAt}
         upvotes={currUpvotes}
+        setCurrUpvotes={setCurrUpvotes}
         downvotes={currDownvotes}
+        setCurrDownvotes={setCurrDownvotes}
       />
       <CommentList comments={currComments}/>
     </div>

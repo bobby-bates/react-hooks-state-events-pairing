@@ -7,7 +7,6 @@ const CommentList = ({ comments }) => {
   const handleCommentsButton = () => {
     // debugger
     const commentList = document.getElementById('commentList')
-    // isHidden ? setIsHidden(false) : setIsHidden(true)
     if (isHidden) {
       setIsHidden(false)
       commentList.style = 'visibility: visible'
